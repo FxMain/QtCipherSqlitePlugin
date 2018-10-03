@@ -40,26 +40,10 @@
 #ifndef SQLITECHIPHER_GLOBAL_H
 #define SQLITECHIPHER_GLOBAL_H
 
-#include <QtGlobal>
-
 #if (QT_VERSION < 0x050000)
 #define DECL_OVERRIDE
 #else
 #define DECL_OVERRIDE Q_DECL_OVERRIDE
-#endif
-
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 11, 0))
-  #if QT_CONFIG(regularexpression)
-    #define REGULAR_EXPRESSION_ENABLED
-  #endif
-  #if QT_CONFIG(timezone)
-    #define TIMEZONE_ENABLED
-  #endif
-#else
-  #ifndef QT_NO_REGULAREXPRESSION
-    #define REGULAR_EXPRESSION_ENABLED
-  #endif
-  #define TIMEZONE_ENABLED
 #endif
 
 #endif // SQLITECHIPHER_GLOBAL_H
